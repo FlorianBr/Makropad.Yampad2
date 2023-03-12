@@ -1,16 +1,16 @@
 MCU = atmega32u4
 BOOTLOADER = caterina
 
-AUDIO_ENABLE = no           # Audio output
-BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
-BOOTMAGIC_ENABLE = no       # We have a physical resit button
-COMMAND_ENABLE = no         # Commands for debug and configuration
-CONSOLE_ENABLE = no         # Console for debug
-DEBOUNCE_TYPE = sym_eager_pk
-EXTRAKEY_ENABLE = no        # Audio control and System control
-LTO_ENABLE = yes            # Link time optimise, reduce firmware size
-MOUSEKEY_ENABLE = no        # Mouse keys
-NKRO_ENABLE = yes           # Enable N-Key Rollover
-OLED_DRIVER = SSD1306
-OLED_ENABLE = yes
-RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
+LTO_ENABLE = yes				# Link time optimisation
+OLED_ENABLE = yes				# OLED support
+OLED_DRIVER = SSD1306			# OLED Driver
+
+MOUSEKEY_ENABLE = no			# mousekeys (Warning: Needs lots of flash)
+EXTRAKEY_ENABLE = no			# Audio/Systemcontrol keys
+CONSOLE_ENABLE = no				# No debug console
+RGBLIGHT_ENABLE = yes			# Enable RGB underglow
+BOOTMAGIC_ENABLE = no			# We have a physical resit button
+BACKLIGHT_ENABLE = no			# No keyboard backlight
+COMMAND_ENABLE = no				# No Commands for debug
+DEBOUNCE_TYPE = sym_eager_pk	# Eager debouncing per key
+NKRO_ENABLE = yes				# Enable N-Key Rollover

@@ -18,7 +18,6 @@ All this code is based on mattdibis original code. Currently it is WIP, but when
 
 # TODO
 
-- Working downlights
 - Graphics on OLED
 - 3D printed case
 
