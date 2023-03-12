@@ -20,6 +20,7 @@ All this code is based on mattdibis original code. Currently it is WIP, but when
 
 - Graphics on OLED
 - 3D printed case
+- Wire a encoder to the Elite C
 
 # Layout
 

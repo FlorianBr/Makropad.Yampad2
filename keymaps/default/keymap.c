@@ -62,7 +62,7 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 }
 
 bool oled_task_user(void) {
-  // Host Keyboard Layer Status
+  // Layer Status
   switch (get_highest_layer(layer_state)) {
     case _BASE:
       oled_write_P(PSTR("[BAS]"), false);
@@ -77,7 +77,7 @@ bool oled_task_user(void) {
       oled_write_P(PSTR("[-?-]"), false);
   }
 
-  // Host Keyboard RGB backlight status
+  // RGB backlight status
   oled_write_P(PSTR("-----"), false);
   static char led_buf[50];
   snprintf(led_buf, sizeof(led_buf) - 1, "RGB:%cM:%3dH:%3dS:%3dV:%3dE:%3d\n",
@@ -87,7 +87,6 @@ bool oled_task_user(void) {
       rgblight_get_val(),
       rgblight_get_speed()
       );
-
   oled_write(led_buf, false);
 
   return false;
