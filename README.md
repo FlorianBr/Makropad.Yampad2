@@ -2,7 +2,9 @@
 
 A [Yampad](https://github.com/mattdibi/yampad) Macro Keyboard, made by [mattdibi](https://github.com/mattdibi)
 
-All this code is based on mattdibis original code. Currently it is WIP, but when done I will try to integrate it into the original directory structure.
+All this code is based on mattdibis original code. On my to do list is the integration into the original directory structure.
+
+![YamPAD Makropad](yampad.png)
 
 # Components
 
@@ -11,6 +13,8 @@ All this code is based on mattdibis original code. Currently it is WIP, but when
 - Keys: Gateron Red
 - Keycaps: Some XDA caps from aliexpress
 - OS: QMK
+- Additional encoder hardwired to the additional pins of the Elite C
+- Case: 3D printed
 
 # Build and flash
 
@@ -19,8 +23,6 @@ All this code is based on mattdibis original code. Currently it is WIP, but when
 # TODO
 
 - Graphics on OLED
-- 3D printed case
-- Wire a encoder to the Elite C
 
 # Layout
 
