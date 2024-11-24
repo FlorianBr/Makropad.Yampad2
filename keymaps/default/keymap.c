@@ -27,27 +27,21 @@ SOFTWARE.
 
 enum layers {
     _BASE,
-    _GAME,
     _RGB
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT(
-    TO(_GAME),    RGUI(KC_KP_1),  RGUI(KC_KP_2),      RGUI(KC_KP_3),
-    RAG(KC_KP_1), RAG(KC_KP_2),   RAG(KC_KP_3),
-    RAG(KC_KP_4), RAG(KC_KP_5),   RAG(KC_KP_6),       LGUI(KC_RIGHT),
-    RAG(KC_KP_7), RAG(KC_KP_8),   RAG(KC_KP_9),
-    RAG(KC_A),    RAG(KC_B),      RAG(KC_C),          LGUI(KC_LEFT)
-  ),
-  [_GAME] = LAYOUT(
-    TO(_RGB), KC_4,  KC_5,   KC_6,
-    KC_1,     KC_2,  KC_3,
-    KC_Q,     KC_W,  KC_E,   KC_ENTER,
-    KC_A,     KC_S,  KC_D,
-    KC_Y,     KC_X,  KC_C,   KC_SPC
+    // RAG: Right Alt + Right GUI
+    // RSG: Right Shift + Right GUI
+    TO(_RGB),         RSG(KC_F1),          RSG(KC_F2),         RSG(KC_F3),
+    RSG(KC_KP_0),     RSG(KC_KP_1),        RSG(KC_KP_2),
+    RSG(KC_KP_3),     RSG(KC_KP_4),        RSG(KC_KP_5),       RSG(KC_KP_PLUS),
+    RSG(KC_KP_6),     RSG(KC_KP_7),        RSG(KC_KP_8),
+    RSG(KC_KP_SLASH), RSG(KC_KP_ASTERISK), RSG(KC_KP_DOT),     RSG(KC_KP_MINUS)
   ),
   [_RGB] = LAYOUT(
-    TO(_BASE), RGB_TOG,   XXXXXXX,   XXXXXXX,
+    TO(_BASE), RGB_TOG ,   XXXXXXX,   XXXXXXX,
     RGB_RMOD,  RGB_MOD,    XXXXXXX,
     RGB_HUD,   RGB_HUI,    XXXXXXX,   RGB_SPI,
     RGB_SAD,   RGB_SAI,    XXXXXXX,
@@ -67,9 +61,9 @@ bool oled_task_user(void) {
     case _BASE:
       oled_write_P(PSTR("[BAS]"), false);
       break;
-    case _GAME:
-      oled_write_P(PSTR("[GAM]"), false);
-      break;
+    // case _GAME:
+    //   oled_write_P(PSTR("[GAM]"), false);
+    //   break;
     case _RGB:
       oled_write_P(PSTR("[RGB]"), false);
       break;
@@ -94,14 +88,14 @@ bool oled_task_user(void) {
 #endif
 
 #ifdef ENCODER_ENABLE
-bool encoder_update_user(uint8_t index, bool clockwise) {
-  if (clockwise) {
-    tap_code_delay(KC_VOLU, 10);
-  } else {
-    tap_code_delay(KC_VOLD, 10);
-  }
-  return true;
-}
+// bool encoder_update_user(uint8_t index, bool clockwise) {
+//   if (clockwise) {
+//     tap_code_delay(KC_VOLU, 1);
+//   } else {
+//     tap_code_delay(KC_VOLD, 1);
+//   }
+//   return true;
+// }
 
 bool dip_switch_update_user(uint8_t index, bool active) {
   switch (index) {
