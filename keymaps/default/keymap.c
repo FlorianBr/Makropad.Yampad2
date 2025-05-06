@@ -34,11 +34,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT(
     // RAG: Right Alt + Right GUI
     // RSG: Right Shift + Right GUI
-    TO(_RGB),         RSG(KC_F1),          RSG(KC_F2),         RSG(KC_F3),
-    RSG(KC_KP_0),     RSG(KC_KP_1),        RSG(KC_KP_2),
-    RSG(KC_KP_3),     RSG(KC_KP_4),        RSG(KC_KP_5),       RSG(KC_KP_PLUS),
-    RSG(KC_KP_6),     RSG(KC_KP_7),        RSG(KC_KP_8),
-    RSG(KC_KP_SLASH), RSG(KC_KP_ASTERISK), RSG(KC_KP_DOT),     RSG(KC_KP_MINUS)
+    TO(_RGB),        RSG(KC_F1),         RSG(KC_F2),    RSG(KC_F3),
+    RCTL(KC_F13),    RCTL(KC_F14),    RCTL(KC_F15),
+    RCTL(KC_F16),    RCTL(KC_F17),    RCTL(KC_F18),   LCA(KC_F20),
+    RCTL(KC_F19),    RCTL(KC_F20),    RCTL(KC_F21),
+    RCTL(KC_F22),    RCTL(KC_F23),    RCTL(KC_F24),   LCA(KC_F21)
   ),
   [_RGB] = LAYOUT(
     TO(_BASE), RGB_TOG ,   XXXXXXX,   XXXXXXX,
